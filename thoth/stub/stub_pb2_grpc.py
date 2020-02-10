@@ -18,7 +18,7 @@ class StubStub(object):
         '/stub.Stub/Info',
         request_serializer=thoth_dot_stub_dot_stub__pb2.Empty.SerializeToString,
         response_deserializer=thoth_dot_stub_dot_stub__pb2.InfoResponse.FromString,
-        )
+    )
 
 
 class StubServicer(object):
@@ -42,5 +42,6 @@ def add_StubServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'stub.Stub', rpc_method_handlers)
+      'stub.Stub', rpc_method_handlers,
+  )
   server.add_generic_rpc_handlers((generic_handler,))

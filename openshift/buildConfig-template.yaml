@@ -20,20 +20,20 @@ parameters:
     displayName: Git Repository
     required: true
     name: GITHUB_URL
-    value: 'https://github.com/thoth-station/stub-api'
+    value: "https://github.com/thoth-station/stub-api"
 
   - description: Git reference to be used for stub API
     displayName: Git Reference
     required: true
     name: GITHUB_REF
-    value: 'master'
+    value: "master"
 
   - description: >
       Tag of the output ImageStream the resulting container image should go to
     displayName: ImageStream Tag
     required: true
     name: IMAGE_STREAM_TAG
-    value: 'latest'
+    value: "latest"
 
 objects:
   - kind: BuildConfig
@@ -68,14 +68,12 @@ objects:
             name: python-36-centos7:latest
           env:
             - name: ENABLE_PIPENV
-              value: '1'
+              value: "1"
             - name: UPGRADE_PIP_TO_LATEST
-              value: ''
+              value: ""
             - name: WEB_CONCURRENCY
-              value: '4'
+              value: "4"
       triggers:
         - type: ConfigChange
         - type: ImageChange
           imageChange: {}
-
-

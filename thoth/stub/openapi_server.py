@@ -136,7 +136,7 @@ def internal_server_error(exc):
             {
                 "error": "Internal server error occurred, please contact administrator with provided details.",
                 "details": {"type": exc.__class__.__name__, "datetime": datetime2datetime_str(datetime.utcnow())},
-            }
+            },
         ),
         500,
     )

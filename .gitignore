@@ -129,3 +129,4 @@ dmypy.json
 server.crt
 server.key
 certs/
+.thoth_last_analysis_id

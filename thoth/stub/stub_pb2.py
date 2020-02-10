@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='stub',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x15thoth/stub/stub.proto\x12\x04stub\"V\n\x0cInfoResponse\x12\x0f\n\x07version\x18\x01 \x01(\t\x12\x18\n\x10\x63onnexionVersion\x18\x02 \x01(\t\x12\x1b\n\x13jaegerClientVersion\x18\x03 \x01(\t\"\x07\n\x05\x45mpty2/\n\x04Stub\x12\'\n\x04Info\x12\x0b.stub.Empty\x1a\x12.stub.InfoResponseb\x06proto3')
+  serialized_pb=_b('\n\x15thoth/stub/stub.proto\x12\x04stub\"V\n\x0cInfoResponse\x12\x0f\n\x07version\x18\x01 \x01(\t\x12\x18\n\x10\x63onnexionVersion\x18\x02 \x01(\t\x12\x1b\n\x13jaegerClientVersion\x18\x03 \x01(\t\"\x07\n\x05\x45mpty2/\n\x04Stub\x12\'\n\x04Info\x12\x0b.stub.Empty\x1a\x12.stub.InfoResponseb\x06proto3'),
 )
 
 
@@ -38,21 +38,24 @@ _INFORESPONSE = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,
+    ),
     _descriptor.FieldDescriptor(
       name='connexionVersion', full_name='stub.InfoResponse.connexionVersion', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,
+    ),
     _descriptor.FieldDescriptor(
       name='jaegerClientVersion', full_name='stub.InfoResponse.jaegerClientVersion', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,
+    ),
   ],
   extensions=[
   ],
@@ -97,18 +100,22 @@ DESCRIPTOR.message_types_by_name['InfoResponse'] = _INFORESPONSE
 DESCRIPTOR.message_types_by_name['Empty'] = _EMPTY
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
-InfoResponse = _reflection.GeneratedProtocolMessageType('InfoResponse', (_message.Message,), dict(
-  DESCRIPTOR = _INFORESPONSE,
-  __module__ = 'thoth.stub.stub_pb2'
-  # @@protoc_insertion_point(class_scope:stub.InfoResponse)
-  ))
+InfoResponse = _reflection.GeneratedProtocolMessageType(
+    'InfoResponse', (_message.Message,), dict(
+    DESCRIPTOR = _INFORESPONSE,
+    __module__ = 'thoth.stub.stub_pb2',
+    # @@protoc_insertion_point(class_scope:stub.InfoResponse)
+    ),
+)
 _sym_db.RegisterMessage(InfoResponse)
 
-Empty = _reflection.GeneratedProtocolMessageType('Empty', (_message.Message,), dict(
-  DESCRIPTOR = _EMPTY,
-  __module__ = 'thoth.stub.stub_pb2'
-  # @@protoc_insertion_point(class_scope:stub.Empty)
-  ))
+Empty = _reflection.GeneratedProtocolMessageType(
+    'Empty', (_message.Message,), dict(
+    DESCRIPTOR = _EMPTY,
+    __module__ = 'thoth.stub.stub_pb2',
+    # @@protoc_insertion_point(class_scope:stub.Empty)
+    ),
+)
 _sym_db.RegisterMessage(Empty)
 
 
@@ -131,7 +138,8 @@ _STUB = _descriptor.ServiceDescriptor(
     output_type=_INFORESPONSE,
     serialized_options=None,
   ),
-])
+],
+)
 _sym_db.RegisterServiceDescriptor(_STUB)
 
 DESCRIPTOR.services_by_name['Stub'] = _STUB
